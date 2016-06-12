@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+    debugger:
+      build: ./debugger
+      network_mode: service:app
+      working_dir: /usr/src/app
+      volumes_from:
+        - app
