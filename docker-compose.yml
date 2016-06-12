@@ -1,12 +1,13 @@
 version: '2'
 
 services:
+  debugger-source:
+    build: ./debugger
+
   app:
     build: ./app
-    volumes:
-      - ./app:/usr/src/app:rw
+    volumes_from:
+      - debugger-source
     ports:
-      # debugger port:
-      - 8080:8080
-      # app port:
-      - 8090:8090
+      - 8080:8080  # debugger port
+      - 8090:8090  # application port

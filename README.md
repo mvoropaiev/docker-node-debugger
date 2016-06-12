@@ -1,2 +1,2 @@
-- `docker-compose up -d app`
+- `docker-compose up -d`
 - `./debugger.sh`
